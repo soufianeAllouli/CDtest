@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,6 +24,7 @@ public class WebappApplication {
         Map<String,Object> map=new HashMap<>();
         map.put("message","from Docker deployment");
         map.put("count",++count);
+        map.put("date",new Date());
 
         return map;
     }
