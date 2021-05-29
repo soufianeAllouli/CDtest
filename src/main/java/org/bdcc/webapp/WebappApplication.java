@@ -11,6 +11,7 @@ import java.util.Map;
 @SpringBootApplication
 @RestController
 public class WebappApplication {
+    static  int count;
 
     public static void main(String[] args) {
 
@@ -21,7 +22,8 @@ public class WebappApplication {
     public Map<String,Object> test(){
         Map<String,Object> map=new HashMap<>();
         map.put("message","from Docker deployment");
-        map.put("count",333);
+        map.put("count",++count);
+
         return map;
     }
 
