@@ -22,7 +22,7 @@ public class WebappApplication {
     @GetMapping()
     public Map<String,Object> test(){
         Map<String,Object> map=new HashMap<>();
-        map.put("message","from Docker deployment");
+        map.put("message","from Docker deployment automation with jinkens");
         map.put("count",++count);
         map.put("date",new Date());
 
